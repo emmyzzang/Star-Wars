@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Star Wars</title>
+	<!-- bootstrap cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- google fonts -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bad Script" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script|Monoton|Raleway+Dots|Vibur" rel="stylesheet">
+	<!-- css stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<header>
+				<h1>Star Wars RPG!</h1>
+			</header>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">		
+				<!-- character starting area -->
+				<div id="allCharacters"></div>
+
+				<!-- player area -->
+				<h2 class="display">Your Character</h2>
+				<div id="yourCharacter"></div>
+
+				<!-- defender area -->
+				<h2 class="display">Defender</h2>
+				<div id="defender"></div>
+			</div>
+
+			<div class="col-md-6">
+				<!-- available opponents -->
+				<h2 class="display">Enemies Available To Attack</h2>
+				<div id="availableEnemies"></div>
+
+				<!-- fight section -->
+				<h2 class="display">Fight Section</h2>
+				<!-- attack button -->
+				<button type="button" class="btn btn-danger raised display" id="attack">Attack</button>
+
+				<!-- game text -->
+				<p id="gameText"></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery cdn -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<!-- javascript file -->
+	<script src="assets/game.js"></script>
+	
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
