@@ -3,15 +3,15 @@ $(document).ready(function(){
 // VARIABLES
 // ===============================================
 var characters = [
-	{name: 'Chewbacca', img: 'assets/chewy.jpg', hp: 120, ap: 20, ca: 20},
-	{name: 'Luke Skywalker', img: 'assets/luke.png', hp: 100, ap: 25, ca: 25},
-	{name: 'Darth Vader', img: 'assets/vader.jpg', hp: 150, ap: 15, ca: 15},
-	{name: 'Hoth Wampa', img: 'assets/wampa.jpg', hp: 180, ap: 10, ca: 10}
+	{name: 'Chewbacca', img: 'chewy.jpg', hp: 120, ap: 20, ca: 20},
+	{name: 'Luke Skywalker', img: 'luke.png', hp: 100, ap: 25, ca: 25},
+	{name: 'Darth Vader', img: 'vader.jpg', hp: 150, ap: 15, ca: 15},
+	{name: 'Hoth Wampa', img: 'wampa.jpg', hp: 180, ap: 10, ca: 10}
 ];
 var playerIsChosen = false;
 var enemyIsChosen = false;
 
-// Display characters on the page and convert all the characters to buttons 
+// Display characters on the page and convert all the characters to buttons
 function start() {
 	$('.display').hide();
 	for (var i = 0; i < characters.length; i++) {
@@ -30,7 +30,6 @@ function start() {
 }
 
 //Choose a hero
-
 
 
 // Choose player
@@ -59,21 +58,21 @@ $(document).on('click', '.possibleEnemies', function() {
 		enemyIsChosen = true;
 		var p = $('<p>');
 		p.append('CHARGE!!! Attack!');
-		$('#gameText').append(p);	
+		$('#gameText').append(p);
 	}
 });
 
 // Attack button functionality
 $(document).on('click', '#attack', function() {
 	var playerName = $('#yourCharacter').children().attr('name');
-	var playerHP = $('#yourCharacter').children().attr('hp');	
+	var playerHP = $('#yourCharacter').children().attr('hp');
 	var playerAP = $('#yourCharacter').children().attr('ap');
 	var defenderName = $('#defender').children().attr('name');
 	var defenderHP = $('#defender').children().attr('hp');
 	var defenderCA = $('#defender').children().attr('ca');
 	// player and defender are both chosen
 	if (playerIsChosen && enemyIsChosen && playerHP > 0) {
-		$('#gameText').empty();	
+		$('#gameText').empty();
 		// player damages defender
 		defenderHP -= playerAP;
 		$('#defender').children().attr('hp', defenderHP);
@@ -91,7 +90,7 @@ $(document).on('click', '#attack', function() {
 			for (var i = 0; i < characters.length; i++) {
 				if (characters[i].name == playerName) {
 					var basePlayerAP = characters[i].ap;
-				}				 
+				}
 			}
 			playerAP = parseInt(playerAP) + parseInt(basePlayerAP);
 			$('#yourCharacter').children().attr('ap', playerAP);
